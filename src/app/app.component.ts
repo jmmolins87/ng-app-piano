@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'emptyangularproject';
+  
+  applySound( num: number ) {
+    const audio = new Audio();
+    audio.src = `./../assets/sounds/note${ num }.wav`;
+    audio.load();
+    audio.play();
+  }
+
 }
