@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public stylesList: string [] = [ 'primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light' ];
   
   applySound( num: number ) {
     const audio = new Audio();
