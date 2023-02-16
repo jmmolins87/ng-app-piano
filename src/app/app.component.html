@@ -1,12 +1,14 @@
 <div class="container mt-5">
-  <div class="row justify-content-center align-items-center">
+  <div class="row justify-content-center">
     <div class="col-4">
       <h1 class="text-center">App Piano</h1>
-      <ul class="list-group mt-4">
-        <ng-container *ngFor="let style of stylesList; let i = index">
+      <ul class="mt-5">
+        <ng-container *ngFor="let item of stylesNotesList; let i = index">
           <li 
             (click)="applySound( i + 1 )" 
-            class="list-group-item list-group-item-action list-group-item-{{ style }}"></li>
+            class="list-group-item list-group-item-action list-group-item-{{ item.color }} text-center p-3">
+            {{ item.note }}
+          </li>
         </ng-container>
       </ul>
     </div>

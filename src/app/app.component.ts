@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { stylesNotesList } from './app-interface.model';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +7,47 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  public stylesList: string [] = [ 'primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light' ];
   
+  public stylesNotesList: stylesNotesList[] = [
+    {
+      color: 'primary',
+      note: 'Do'
+    },
+    {
+      color: 'secondary',
+      note: 'Re'
+    },
+    {
+      color: 'danger',
+      note: 'Mi'
+    },
+    {
+      color: 'warning',
+      note: 'Fa'
+    },
+    {
+      color: 'info',
+      note: 'Sol'
+    },
+    {
+      color: 'light',
+      note: 'La'
+    },
+    {
+      color: 'dark',
+      note: 'Si'
+    },
+    {
+      color: 'primary',
+      note: 'Do'
+    }
+  ]
+
   applySound( num: number ) {
-    const audio = new Audio();
-    audio.src = `./../assets/sounds/note${ num }.wav`;
-    audio.load();
-    audio.play();
+    const AUDIO = new Audio();
+    AUDIO.src = `./../assets/sounds/note${ num }.wav`;
+    AUDIO.load();
+    AUDIO.play();
   }
 
 }
