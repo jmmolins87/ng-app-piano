@@ -8,13 +8,13 @@ import { stylesNotesList } from './app-interface.model';
 })
 export class AppComponent {
   
-  public stylesNotesList: stylesNotesList[] = [
+  public stylesNotesList: stylesNotesList [] = [
     {
       color: 'primary',
       note: 'Do'
     },
     {
-      color: 'secondary',
+      color: 'success',
       note: 'Re'
     },
     {
@@ -30,11 +30,11 @@ export class AppComponent {
       note: 'Sol'
     },
     {
-      color: 'light',
+      color: 'dark',
       note: 'La'
     },
     {
-      color: 'dark',
+      color: 'light',
       note: 'Si'
     },
     {
@@ -42,8 +42,8 @@ export class AppComponent {
       note: 'Do'
     }
   ]
-
-  applySound( num: number ) {
+  
+  getMusicalNote( num: number ): void {
     const AUDIO = new Audio();
     AUDIO.src = `./../assets/sounds/note${ num }.wav`;
     AUDIO.load();
